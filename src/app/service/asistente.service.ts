@@ -49,4 +49,13 @@ export class AsistenteService {
   obtenerEventos(): Observable<Evento[]> {
     return this.http.get<Evento[]>(this.urlEndPoint + '/eventos');
   }
+
+  getPDF(): Observable<Blob> {
+    const headers = new HttpHeaders({ 'Content-Type': 'application/pdf' });
+
+    return this.http.get<Blob>(this.urlEndPoint + '/pdf', {
+      headers: headers,
+      responseType: 'blob' as 'json',
+    });
+  }
 }

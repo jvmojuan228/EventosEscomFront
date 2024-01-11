@@ -11,6 +11,7 @@ import { AsistenteComponent } from './asistente/asistente.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { AsistenteformComponent } from './asistenteform/asistenteform.component';
+import { EventoFormComponent } from './evento-form/evento-form.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { AsistenteformComponent } from './asistenteform/asistenteform.component'
     EventosComponent,
     AsistenteComponent,
     AsistenteformComponent,
+    EventoFormComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
   providers: [],

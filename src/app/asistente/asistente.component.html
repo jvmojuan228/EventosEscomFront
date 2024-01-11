@@ -7,13 +7,16 @@
       </h1>
     </div>
     <div class="card-body text-primary">
+      
       <table class="table table-striped">
         <thead>
           <tr>
             <td>idEvento</td>
-            <td>nombreEvento</td>
-            <td>descripcionEvento</td>
-            <td>fechaCreacion</td>
+            <td>nombre</td>
+            <td>Apellido</td>
+            <td>Evento</td>
+            <td></td>
+            <td><a routerLink="/asistentesForm/" class="btn btn-primary"> Registrar  </a></td>
           </tr>
         </thead>
         <tbody>
@@ -22,13 +25,25 @@
             <td>{{ ev.nombre }}</td>
             <td>{{ ev.paterno }}</td>
             <td>{{ ev.idEvento.descripcionEvento }}</td>
-            <td></td>
+            <td>
+              <a class="btn btn-outline-danger" (click)="eliminarAsistente(ev.idAsistente)">
+                Eliminar
+              </a>
+            </td>
             <td>
               <a routerLink="/asistentesForm/{{ev.idAsistente}}" class="btn btn-outline-success"> Actualizar </a>
             </td>
           </tr>
         </tbody>
       </table>
+      <button
+            class="btn btn-primary form-control mt-3"
+              type="button"
+              (click)="descargarPDF()">
+            Obtener reporte
+      </button>
     </div>
+    
   </div>
+  <a routerLink="/home" class="btn btn-outline-primary mt-3"> Regresar </a>
 </div>

@@ -89,7 +89,17 @@
             >
               Actualizar Asistente
             </button>
+            <button
+              class="btn btn-danger form-control mt-3"
+              type="button"
+              (click)="eliminarAsistente()"
+            >
+              Eliminar
+            </button>
           </ng-template>
+
+          <a routerLink="/asistentes/" class="btn btn-outline-primary mt-3"> Regresar </a>
+          
         </div>
       </form>
     </div>
